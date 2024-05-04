@@ -1,0 +1,147 @@
+* {
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+.page-1 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(/image/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.company-name {
+    padding-left: 5px;
+}
+
+.page-link {
+    text-decoration: none;
+    padding: 5px;
+    font-size: 1.1rem;
+}
+
+.signin-btn {
+    background-color: #e40690;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.page-link:hover {
+    color: #e40690;
+}
+
+.signin-btn:hover {
+    color: white;
+    padding: 12px 23px;
+    transition: 0.25s ease-in;
+}
+
+main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    flex-wrap: wrap;
+}
+
+.slogan .title {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.slogan .tagline {
+    margin: 30px 10px 40px 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#p1-button {
+    margin-top: 10px;
+}
+
+
+.btn-fill {
+    padding: 15px 25px;
+    border-radius: 50px;
+    background-color: #e40690;
+    margin: 10px;
+}
+
+.btn-outline {
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: 2px solid #e40690;
+}
+
+.btn-fill:hover {
+    padding: 17px 30px;
+    transition: 0.25s ease-in;
+
+}
+
+.btn-outline:hover {
+    padding: 17px 30px;
+    transition: 0.25s ease-in;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    nav {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+    .page-section {
+        text-align: end;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    #p1-button {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+}
