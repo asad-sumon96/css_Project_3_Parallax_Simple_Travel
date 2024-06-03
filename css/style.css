@@ -1,32 +1,39 @@
 * {
     font-family: poppins, sans-serif;
-    font-weight: 400;
     margin: 0;
     padding: 0;
-    color: white;
     box-sizing: border-box;
-}
-
-body {
-    overflow: hidden;
 }
 
 a {
     text-decoration: none;
+    color: white;
 }
 .page-1 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    background-image: url(/image/2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../image/1.jpg);
     display: flex;
     flex-direction: column;
 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.page-1,
+.page-2,
+.page-3 {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 nav {
-    padding: 20px;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,112 +43,166 @@ nav {
 .logo {
     display: flex;
     align-items: center;
+    color: white;
 }
 
 .company-name {
-    padding-left: 5px;
+    padding-left: 0.3rem;
 }
 
 .page-link {
     text-decoration: none;
-    padding: 5px;
+    padding: 0.3rem;
     font-size: 1.1rem;
 }
 
 .signin-btn {
     background-color: #e40690;
-    padding: 10px 20px;
-    border-radius: 50px;
+    padding: 0.8rem 1.3rem;
+    border-radius: 3rem;
 }
 
 .page-link:hover {
     color: #e40690;
+    border-bottom: 0.2rem solid #e40690;
+    transition: 0.2s ease-in;
 }
 
 .signin-btn:hover {
     color: white;
-    padding: 12px 23px;
+    padding: 0.8rem 1.5rem;
     transition: 0.25s ease-in;
 }
 
 main {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 200px;
-    flex-wrap: wrap;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    color: white;
 }
 
 .slogan .title {
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.125rem;
 }
 
 .slogan .tagline {
-    margin: 30px 10px 40px 10px;
+    margin: 2rem 0.8rem;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.125rem;
 }
 
 #p1-button {
-    margin-top: 10px;
+    margin-top: 0.8rem;
 }
 
 
 .btn-fill {
-    padding: 15px 25px;
-    border-radius: 50px;
+    padding: 0.9rem 1.6rem;
+    border-radius: 3rem;
     background-color: #e40690;
-    margin: 10px;
+    margin: 0.8rem;
 }
 
 .btn-outline {
-    padding: 15px 25px;
-    border-radius: 50px;
-    border: 2px solid #e40690;
+    padding: 0.9rem 1.6rem;
+    border-radius: 3rem;
+    border: 0.125rem solid #e40690;
 }
 
 .btn-fill:hover {
-    padding: 17px 30px;
+    padding: 1rem 2rem;
     transition: 0.25s ease-in;
 
 }
 
 .btn-outline:hover {
-    padding: 17px 30px;
+    background-color: #e40690;
+    padding: 1rem 2rem;
     transition: 0.25s ease-in;
 }
 
 
-@media screen and (max-width: 800px) {
 
+.section {
+    padding: 3rem 4rem;
+    text-align: center;
+    letter-spacing: 0.06rem;
+}
+
+.section_light {
+    color: #2d2d2d;
+    background-color: white;
+}
+
+.section h2  {
+    padding: 1.5rem 0rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+
+.page-2 {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../image/2.jpg);
+    display: flex;
+    flex-direction: column;
+}
+
+.section_dark {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    color: white;
+    background-color: #2d2d2d;
+}
+
+.hero_text{
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    color: white;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    font-weight: 500;
+
+}
+.hero_text_bg {
+    background-color: #2d2d2d;
+    padding: 1rem 1.5rem;
+}
+
+.page-3 {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../image/3.jpg);
+    display: flex;
+    flex-direction: column;
+}
+
+.section_gray {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    color: white;
+    background-color: #2d2d2d;
+}
+
+@media (max-width:930px) {
     nav {
-        display: flex;
+        flex-direction: column;
         align-items: baseline;
-        justify-content: space-between;
     }
     .page-section {
-        text-align: end;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
+        visibility: hidden;
     }
 
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 60px;
-    }
-
-    #p1-button {
-        margin-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    .page-2 {
+        min-height: 150vh;
     }
     
 }
